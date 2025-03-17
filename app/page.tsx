@@ -5,6 +5,7 @@ import { useState } from "react";
 import dynamic from "next/dynamic";
 import CrimeForm from "@/components/common/CrimeFormModal";
 import CrimeFormModal from "@/components/common/CrimeFormModal";
+import {HeroUIProvider} from "@heroui/system";
 
 // Dynamically import the map client component
 const MapView = dynamic(() => import("@/components/map/mapview"), { ssr: false });
@@ -29,6 +30,7 @@ export default function Home() {
   };
 
   return (
+    <HeroUIProvider>
     <div className="p-8">
       <header className="mb-8">
         <h1 className="text-3xl font-bold">Shadow Watch Crime Reporting System</h1>
@@ -39,5 +41,6 @@ export default function Home() {
       </main>
       <CrimeFormModal onSubmit={handleFormSubmit} />
     </div>
+    </HeroUIProvider>
   );
 }
