@@ -11,6 +11,7 @@
   "dependencies": {
     "@heroui/react": "^2.7.5",
     "@react-google-maps/api": "^2.20.6",
+    "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.49.1",
     "dom": "^0.0.3",
     "framer-motion": "^12.5.0",
@@ -23,6 +24,8 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "eslint": "9.22.0",
+    "eslint-config-next": "15.2.2",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

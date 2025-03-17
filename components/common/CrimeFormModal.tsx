@@ -21,23 +21,27 @@ export default function CrimeFormModal({ onSubmit }: { onSubmit: (data: FormData
         Report a Crime
       </Button>
       <Modal
-        backdrop="opaque"
-        classNames={{
-          backdrop: "bg-gradient-to-t from-zinc-900 to-zinc-900/10 backdrop-opacity-20",
-        }}
         isOpen={isOpen}
         onOpenChange={onOpenChange}
+        backdrop="opaque"
+        classNames={{
+          container: "fixed inset-0 z-50 flex items-center justify-center", // Force the modal to be fixed and centered
+          backdrop: "bg-black/90 bg-opacity-50", // A semi-transparent backdrop
+        }}
       >
-        <ModalContent className="flex flex-col justify-center items-center w-full max-w-4xl p-6">
+        <ModalContent className="w-full max-w-4xl bg-black p-6 rounded-2xl">
           {(onClose) => (
-            <div className="w-full bg-black p-4 rounded-2xl">
+            <>
               <ModalHeader className="text-xl font-bold mb-4">
                 Report a Crime
               </ModalHeader>
               <ModalBody className="space-y-4">
                 <CrimeForm onClose={onClose} onSubmit={onSubmit} />
               </ModalBody>
-            </div>
+              <ModalFooter className="flex justify-end gap-2 mt-4">
+                
+              </ModalFooter>
+            </>
           )}
         </ModalContent>
       </Modal>
