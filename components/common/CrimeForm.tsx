@@ -128,7 +128,7 @@ export default function CrimeForm({ onClose, onSubmit }: CrimeFormProps) {
           name="report_details"
           value={formData.report_details}
           onChange={handleChange}
-          className="mt-1 block w-full rounded-md border border-gray-300 p-2"
+          className="mt-1 block w-full rounded-md border border-gray-400 p-2"
           required
         />
         {errors.report_details && (
@@ -143,7 +143,7 @@ export default function CrimeForm({ onClose, onSubmit }: CrimeFormProps) {
           name="crime_type"
           value={formData.crime_type}
           onChange={handleChange}
-          className="mt-1 block w-full rounded-md border border-gray-300 p-2"
+          className="mt-1 block w-full rounded-md border border-gray-400 p-2"
           required
         >
           <option value="">Select a crime type</option>
@@ -166,7 +166,7 @@ export default function CrimeForm({ onClose, onSubmit }: CrimeFormProps) {
           name="civil_id"
           value={formData.civil_id}
           onChange={handleChange}
-          className="mt-1 block w-full rounded-md border border-gray-300 p-2"
+          className="mt-1 block w-full rounded-md border border-gray-400 p-2"
           required
           pattern="\d{7}"
           title="Please enter exactly 7 digits."
@@ -177,7 +177,7 @@ export default function CrimeForm({ onClose, onSubmit }: CrimeFormProps) {
       </div>
 
       {/* Map Section with Integrated Location Inputs and Locate Me Button */}
-      <div className="relative w-full h-64 rounded-md overflow-hidden border border-gray-300">
+      <div className="relative w-full h-64 rounded-md overflow-hidden border border-gray-400">
         {/* Map Picker */}
         <MapPicker
           onLocationSelect={(lat, lng) => {
@@ -199,7 +199,7 @@ export default function CrimeForm({ onClose, onSubmit }: CrimeFormProps) {
               step="any"
               value={formData.latitude}
               onChange={handleChange}
-              className="mt-1 block w-full rounded-md border border-gray-300 p-1 text-sm"
+              className="mt-1 block w-full rounded-md border border-gray-400 p-1 text-sm"
               required
             />
           </div>
@@ -211,7 +211,7 @@ export default function CrimeForm({ onClose, onSubmit }: CrimeFormProps) {
               step="any"
               value={formData.longitude}
               onChange={handleChange}
-              className="mt-1 block w-full rounded-md border border-gray-300 p-1 text-sm"
+              className="mt-1 block w-full rounded-md border border-gray-400 p-1 text-sm"
               required
             />
           </div>

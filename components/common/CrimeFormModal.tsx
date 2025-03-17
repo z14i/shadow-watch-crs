@@ -16,7 +16,6 @@ export default function CrimeFormModal({ onSubmit }: { onSubmit: (data: FormData
 
   return (
     <>
-      {/* Button to open the modal */}
       <Button onPress={onOpen} className="bg-blue-500 text-white px-4 py-2 rounded-md">
         Report a Crime
       </Button>
@@ -25,11 +24,15 @@ export default function CrimeFormModal({ onSubmit }: { onSubmit: (data: FormData
         onOpenChange={onOpenChange}
         backdrop="opaque"
         classNames={{
-          container: "fixed inset-0 z-50 flex items-center justify-center", // Force the modal to be fixed and centered
-          backdrop: "bg-black/90 bg-opacity-50", // A semi-transparent backdrop
+            body: "py-6",
+            backdrop: "bg-[#292f46]/50 backdrop-opacity-40",
+            base: "border-[#292f46] bg-[#19172c] dark:bg-[#19172c] text-[#a8b0d3]",
+            header: "border-b-[1px] border-[#292f46] ",
+            footer: "border-t-[1px] border-[#292f46]",
+            closeButton: "hidden",
         }}
       >
-        <ModalContent className="w-full max-w-4xl bg-black p-6 rounded-2xl">
+        <ModalContent className="w-full max-w-2xl bg-black p-6 rounded-2xl flex flex-col ">
           {(onClose) => (
             <>
               <ModalHeader className="text-xl font-bold mb-4">
@@ -39,7 +42,7 @@ export default function CrimeFormModal({ onSubmit }: { onSubmit: (data: FormData
                 <CrimeForm onClose={onClose} onSubmit={onSubmit} />
               </ModalBody>
               <ModalFooter className="flex justify-end gap-2 mt-4">
-                
+
               </ModalFooter>
             </>
           )}
